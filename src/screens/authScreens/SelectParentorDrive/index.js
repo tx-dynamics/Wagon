@@ -28,27 +28,29 @@ const SelectParentorDrive = () => {
                     resizeMode={"contain"} />
                 <View style={{ flexDirection: "row" , justifyContent:"center", marginTop:45}}>
 
-                    <AppText style={styles.continueUs}>Welcome to</AppText>
-                    <AppText style={styles.waganTxt}> wagon</AppText>
+                    <AppText txtStyle={{fontSize:20}}>Welcome to</AppText>
+                    <AppText txtStyle={{fontSize:20, color:Colors.red}}> wagon</AppText>
                 </View>
 
             </View>
             <View style={{ height: "50%", justifyContent: "center" }}>
-                <AppText style={styles.continueUs}>Continue as</AppText>
+                <AppText txtStyle={{fontSize:18, fontWeight:"400"}}>Continue as</AppText>
                 <AppButton
-                    buttonTitle={"Wagon Daily"}
-                    onPress={() => alert("Helo")}
-                    customStyle={{ marginTop: 21 }}
-                    ImageButton={true}
+                    btnTxt={"Wagon Daily"}
+                    onPress={() => navigation.navigate("OnBoarding")}
+                    ImageBack={Images.RightChev}
+                    customButtonStyle={{ marginTop: 21 }}
+                    buttonTextWithImage={{color:"white"}}
+                    txtStyle={{color:"white", marginStart:10, fontWeight:"bold"}}
                 />
                 <AppButton
-                    buttonTitle={"Wagon Business"}
-                    onPress={() => alert("Helo fr")}
-                    customStyle={{ marginTop: 20 }}
-                    ImageButton={false}
-
-
-                />
+                    btnTxt={"Wagon Business"}
+                    onPress={() => alert("Comming Soon")}
+                    customButtonStyle={{ marginTop: 21 }}
+                    buttonTextWithImage={{textAlign :"center"}}
+                    txtStyle={{color:"white", marginStart:10, fontWeight: "bold",}}
+                    ImageBack={Images.RightChev}
+                    />
             </View>
         </SafeAreaView>
     )

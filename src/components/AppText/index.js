@@ -2,19 +2,14 @@ import React from 'react';
 import {Text} from 'react-native';
 import styles from './styles';
 
-const AppText = ({
- props,
-children,
-style,
-numberOfLines
-}) => {
+const AppText = (props) => {
   return (
     <Text
       {...props}
-      numberOfLines={numberOfLines}
-      style={styles.text , style}
+      numberOfLines={props.numberOfLines}
+      style={[styles.text , props.txtStyle]}
       >
-      {children}
+      {props.children}
     </Text>
   );
 };

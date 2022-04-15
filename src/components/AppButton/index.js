@@ -1,30 +1,18 @@
 import React from 'react';
-import { TouchableOpacity, Image } from 'react-native';
+import { TouchableOpacity, Image, } from 'react-native';
 import Apptext from 'src/components/AppText';
-import { Images } from 'src/utils'
 import styles from './styles'
 
 
-const AppButton = ({ buttonTitle, onPress, style, customStyle, ImageButton }) => {
-
+const AppButton = (props) => {
     return (
-        ImageButton ?
-            <TouchableOpacity
-                onPress={onPress}
-                style={[styles.buttonContainer, customStyle]}
-                customStyle={style}>
-                <Apptext style={styles.buttonTextWithImage}>{buttonTitle}</Apptext>
-                <Image source={Images.RightChev} style={styles.leftArrowIcon} />
+        <TouchableOpacity
+            onPress={props.onPress}
+            style={[styles.buttonContainer, props.customButtonStyle]}>
+            <Apptext txtStyle={props.txtStyle}>{props.btnTxt}</Apptext>
+            <Image source={props.ImageBack} style={[styles.leftArrowIcon, props.leftButtonStyle]} />
+        </TouchableOpacity>
 
-            </TouchableOpacity>
-            :
-            <TouchableOpacity
-                onPress={onPress}
-                style={[styles.buttonContainer, customStyle]}
-                customStyle={style}>
-                <Apptext style={styles.buttonText}>{buttonTitle}</Apptext>
-
-            </TouchableOpacity>
     );
 };
 

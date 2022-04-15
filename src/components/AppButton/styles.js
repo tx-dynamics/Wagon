@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
         color: Colors.white,
         fontFamily: Fonts.SemiBold,
         textAlign:"center",
-        flex:1
     },
     leftArrowIcon: {
         width: 24,
