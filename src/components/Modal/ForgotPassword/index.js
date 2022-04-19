@@ -3,6 +3,8 @@ import {
     View,
     Platform,
 } from "react-native";
+import {Fonts} from 'src/utils'
+
 import RBSheet from "react-native-raw-bottom-sheet";
 import styles from "./styles";
 import AppText from 'src/components/AppText'
@@ -64,7 +66,7 @@ const ForgotPassword = ({ forgotPasswordRef }) => {
                     onPress={() => handleForgotPassword()}
                     leftButtonStyle={{ marginEnd: 0, }}
                     customButtonStyle={{ marginTop: 60, width: "100%" }}
-                    txtStyle={{ color: "white", flex: 1, fontWeight: "bold", textAlign: "center" }}
+                    txtStyle={{ color: "white", flex: 1,textAlign: "center",   fontWeight: "500",fontFamily:Fonts.Medium, fontSize:16 }}
                 />
             </View>
 

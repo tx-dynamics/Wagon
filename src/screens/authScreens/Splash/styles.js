@@ -7,17 +7,18 @@ const styles = StyleSheet.create({
         backgroundColor: Colors.red
     },
     splashImage: {
-        width: 250,
-        height: 250,
+        width: 394,
+        height: 392,
         alignSelf: "center",
     },
     imageContainer: {
-        height: "60%",
-        justifyContent: "flex-end",
+        flex:1,
+        justifyContent: "center",
     },
     gifContainer: {
-        height: "40%",
-        justifyContent: "center",
+        position:"absolute",
+        bottom:100,
+        alignSelf:"center"
     },
     gifImage: {
         width: 120,

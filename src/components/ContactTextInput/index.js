@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, TextInput, Image, TouchableOpacity } from 'react-native'
-import { Images } from 'src/utils'
+import { Images ,Fonts} from 'src/utils'
 import styles from './styles'
 import AppText from 'src/components/AppText'
 
@@ -9,7 +9,7 @@ const ContactTextInput = (props) => {
     return (
         <View style={[styles.mainContianer, props.mainCustomContianer]}>
             {props.headerNameShow ?
-            <AppText txtStyle={{textAlign:"left"}}>{props.headerName}</AppText>
+            <AppText txtStyle={{textAlign:"left", fontFamily:Fonts.Medium}}>{props.headerName}</AppText>
                 :null
             }
             <View style={[styles.container , props.customContainer]}>
@@ -36,7 +36,7 @@ const ContactTextInput = (props) => {
                     />
                     {props.secureText && (
                         <TouchableOpacity onPress={props.onPress} style={styles.iconContainer}>
-                            <Image source={props.eyeOpen ? Images.EyeOpen : Images.PasswordEye} style={styles.eyeOpenIcon} resizeMode={"cover"} />
+                            <Image source={props.eyeOpen ? Images.PasswordEye : Images.EyeOpen} style={styles.eyeOpenIcon} resizeMode={"cover"} />
                         </TouchableOpacity>
                     )}
                    

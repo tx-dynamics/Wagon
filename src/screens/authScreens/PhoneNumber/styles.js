@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-import { Colors } from 'src/utils'
+import { Colors, Fonts } from 'src/utils'
 
 const styles = StyleSheet.create({
     container: {
@@ -53,15 +53,16 @@ const styles = StyleSheet.create({
         tintColor: Colors.black,
         resizeMode: "contain"
     },
-    btnTxt: {
-        color: "white",
-        flex: 1,
-        fontWeight: "bold",
-        textAlign: "center"
-    },
+
     customBtnStyle: {
-        marginTop: 30,
+        marginTop: 15,
         width: "100%"
+    },
+    agreeTxt: {
+        paddingLeft: 10,
+        fontSize: 12,
+        fontWeight: "500",
+        fontFamily: Fonts.Medium
     }
 
 })

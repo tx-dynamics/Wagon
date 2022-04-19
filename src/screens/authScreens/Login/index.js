@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react'
 import { StatusBar, Image, View, SafeAreaView, ScrollView, TouchableOpacity } from "react-native"
 import { useNavigation } from '@react-navigation/native'
-import { Colors, Images } from 'src/utils'
+import { Colors, Images, } from 'src/utils'
 import styles from './styles'
 import AppText from 'src/components/AppText'
 import ContactTextInput from 'src/components/ContactTextInput'
@@ -9,8 +9,6 @@ import AppButton from 'src/components/AppButton'
 import ForgotPassword from 'src/components/Modal/ForgotPassword'
 import { useDispatch } from "react-redux"
 import { setUser } from 'src/redux/actions/authActions'
-
-
 
 const Login = () => {
     let navigation = useNavigation()
@@ -34,7 +32,7 @@ const Login = () => {
                 barStyle={"dark-content"}
                 backgroundColor={Colors.white} />
             <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ flexGrow: 1, }}>
-                <View style={{ marginHorizontal: 20, flex: 1 }}>
+                <View style={styles.innerContainer}>
                     <Image
                         source={Images.LogoBackground}
                         style={styles.logoImage}
@@ -56,7 +54,7 @@ const Login = () => {
                         blurOnSubmit={false}
 
                     />
-                     
+
                     <ContactTextInput
                         ref={passwordRef}
                         headerName={"Password"}
@@ -76,22 +74,22 @@ const Login = () => {
                     <AppButton
                         btnTxt={"Log In"}
                         onPress={() => dispatch(setUser(true))}
-                        leftButtonStyle={{ marginEnd: 0, }}
-                        customButtonStyle={{ marginTop: 30, width: "100%" }}
-                        txtStyle={{ color: "white", flex: 1, fontWeight: "bold", textAlign: "center" }}
+                        customButtonStyle={styles.btnLogin}
                     />
                     <AppText txtStyle={styles.orWithTxt}>Or with</AppText>
 
-                    <View style={{ flexDirection: "row", justifyContent: "center", }}>
+                    <View style={styles.socialContainer}>
                         <Image
                             source={Images.Facebook}
-                            style={[styles.facebookImage, { marginRight: 10 }]}
+                            style={[styles.facebookImage]}
                             resizeMode={"contain"} />
+                        <View style={styles.googleContainer}>
+                            <Image
+                                source={Images.Google}
+                                style={styles.googleImg}
+                                resizeMode={"cover"} />
+                        </View>
 
-                        <Image
-                            source={Images.Google}
-                            style={[styles.facebookImage, { marginLeft: 10 }]}
-                            resizeMode={"contain"} />
                     </View>
 
                     <View style={styles.signupContainer}>
@@ -104,7 +102,7 @@ const Login = () => {
                 </View>
             </ScrollView>
 
-            <ForgotPassword forgotPasswordRef ={forgotPasswordRef}/>
+            <ForgotPassword forgotPasswordRef={forgotPasswordRef} />
 
 
 

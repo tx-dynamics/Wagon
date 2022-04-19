@@ -9,8 +9,11 @@ const AppButton = (props) => {
         <TouchableOpacity
             onPress={props.onPress}
             style={[styles.buttonContainer, props.customButtonStyle]}>
-            <Apptext txtStyle={props.txtStyle}>{props.btnTxt}</Apptext>
-            <Image source={props.ImageBack} style={[styles.leftArrowIcon, props.leftButtonStyle]} />
+            <Apptext txtStyle={[styles.txt, props.txtStyle]}>{props.btnTxt}</Apptext>
+            {props.rightImage ?
+                <Image source={props.ImageBack} style={[styles.leftArrowIcon, props.leftButtonStyle]} />
+                : null
+            }
         </TouchableOpacity>
 
     );

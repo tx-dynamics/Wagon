@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
         width: 24,
         height: 24,
         resizeMode: "contain",
-        marginStart: 10
+        marginStart: 20
     },
     headerTxtContainer:{ 
         flex: 1, 
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
         fontWeight: "500",
         lineHeight: 24,
         color: Colors.black,
-        fontFamily: Fonts.Regular
+        fontFamily: Fonts.Medium
     },
     viewShow:{
         width:"15%"

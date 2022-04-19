@@ -6,15 +6,39 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: Colors.white
     },
+    innerContainer: {
+        marginHorizontal: 20,
+        flex: 1
+    },
     logoImage: {
         width: 120,
         height: 67,
         alignSelf: "center",
         marginTop: 30
     },
+    btnCustomStyle: {
+        marginTop: 30,
+        width: "100%"
+    },
+    socialContainer: {
+        flexDirection: "row",
+        justifyContent: "center",
+        marginVertical:30
+    },
+    googleContainer: {
+        height: 46,
+        width: 46,
+        borderRadius: 23,
+        borderWidth: 0.3,
+        borderColor: Colors.black,
+        justifyContent: "center",
+        alignItems: "center"
+    },
+    googleImg: { height: 27, width: 27 },
     facebookImage: {
         width: 46,
         height: 46,
+        marginRight: 10
     },
     forgotPassword: {
         textAlign: "right",
@@ -26,12 +50,15 @@ const styles = StyleSheet.create({
         textAlign: "left",
         marginTop: 20,
         fontSize: 18,
-        fontWeight: "Bold",
+        fontWeight: "600",
+        fontFamily: Fonts.SemiBold,
         color: Colors.red
     },
     welcomeWagon: {
         textAlign: "left",
         fontSize: 16,
+        fontFamily: Fonts.Medium,
+        fontWeight: "500"
     },
     orWithTxt: {
         fontSize: 16,

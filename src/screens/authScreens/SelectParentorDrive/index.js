@@ -6,12 +6,9 @@ import styles from './styles'
 import AppText from 'src/components/AppText'
 import AppButton from 'src/components/AppButton'
 
-
-
 const SelectParentorDrive = () => {
     let navigation = useNavigation()
-
-
+    
     return (
         <SafeAreaView
             style={styles.container}>
@@ -21,35 +18,36 @@ const SelectParentorDrive = () => {
                 barStyle={"dark-content"}
                 backgroundColor={Colors.white} />
 
-            <View style={{ height: "50%", backgroundColor: "white", justifyContent: "center" }}>
+            <View style={styles.containerOne}>
                 <Image
                     source={Images.LogoBackground}
                     style={styles.logoImage}
                     resizeMode={"contain"} />
-                <View style={{ flexDirection: "row" , justifyContent:"center", marginTop:45}}>
-
-                    <AppText txtStyle={{fontSize:20}}>Welcome to</AppText>
-                    <AppText txtStyle={{fontSize:20, color:Colors.red}}> wagon</AppText>
+                <View style={styles.innerContainer}>
+                    <AppText txtStyle={styles.welcomeTxt}>Welcome to</AppText>
+                    <AppText txtStyle={[styles.welcomeTxt ,{color:Colors.red}]}> wagon</AppText>
                 </View>
 
             </View>
-            <View style={{ height: "50%", justifyContent: "center" }}>
-                <AppText txtStyle={{fontSize:18, fontWeight:"400"}}>Continue as</AppText>
+            <View style={styles.containerOne}>
+                <AppText txtStyle={styles.continueTxt}>Continue as</AppText>
                 <AppButton
                     btnTxt={"Wagon Daily"}
                     onPress={() => navigation.navigate("OnBoarding")}
                     ImageBack={Images.RightChev}
-                    customButtonStyle={{ marginTop: 21 }}
+                    customButtonStyle={styles.btnStyle}
                     buttonTextWithImage={{color:"white"}}
-                    txtStyle={{color:"white", marginStart:10, fontWeight:"bold"}}
+                    rightImage
+                    txtStyle={styles.btnTxt}
                 />
                 <AppButton
                     btnTxt={"Wagon Business"}
                     onPress={() => alert("Comming Soon")}
-                    customButtonStyle={{ marginTop: 21 }}
+                    customButtonStyle={styles.btnStyle}
                     buttonTextWithImage={{textAlign :"center"}}
-                    txtStyle={{color:"white", marginStart:10, fontWeight: "bold",}}
+                    txtStyle={styles.btnTxt}
                     ImageBack={Images.RightChev}
+                    rightImage
                     />
             </View>
         </SafeAreaView>

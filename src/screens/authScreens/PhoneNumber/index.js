@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { StatusBar, View, SafeAreaView, ScrollView, TouchableOpacity, Image } from "react-native"
 import { useNavigation } from '@react-navigation/native'
-import { Colors, Images } from 'src/utils'
+import { Colors, Images,Fonts } from 'src/utils'
 import styles from './styles'
 import AppText from 'src/components/AppText'
 import ContactTextInput from 'src/components/ContactTextInput'
@@ -41,7 +41,6 @@ const PhoneNumber = () => {
                     <View style={styles.numberContainer}>
                         <View style={styles.dropDownContainer}>
                             <DropDownPicker
-                                label="Sales Status"
                                 open={open}
                                 value={value}
                                 items={item}
@@ -49,6 +48,9 @@ const PhoneNumber = () => {
                                 setValue={setValue}
                                 setItems={setItem}
                                 listMode="SCROLLVIEW"
+                                labelStyle={{
+                                    fontWeight:"500", fontFamily:Fonts.Medium
+                                }}
                                 placeholderStyle={{
                                     color: Colors.lightgrey,
                                 }}
@@ -76,6 +78,7 @@ const PhoneNumber = () => {
                                 maxLength={9}
                                 mainCustomContianer={{ marginTop: 0, width: "100%" }}
                                 blurOnSubmit={false}
+                                customInputStyle={{fontWeight:"500", fontFamily:Fonts.Medium}}
 
                             />
                         </View>
@@ -94,14 +97,12 @@ const PhoneNumber = () => {
                                 onPress={() => { setIsChecked(true) }}
                                 style={styles.checkMarkContainer} />
                         }
-                        <AppText txtStyle={{ paddingLeft: 10 }}>I agree to the Terms and Conditions</AppText>
+                        <AppText txtStyle={styles.agreeTxt}>I agree to the Terms and Conditions</AppText>
                     </View>
                     <AppButton
                         btnTxt={"Next"}
                         onPress={() => navigation.navigate("OTPVerify")}
-                        leftButtonStyle={{ marginEnd: 0, }}
                         customButtonStyle={styles.customBtnStyle}
-                        txtStyle={styles.btnTxt}
                     />
                 </View>
             </ScrollView>

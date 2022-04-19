@@ -7,8 +7,6 @@ import AppText from 'src/components/AppText'
 import ContactTextInput from 'src/components/ContactTextInput'
 import AppButton from 'src/components/AppButton'
 
-
-
 const Signup = () => {
     let navigation = useNavigation()
 
@@ -33,7 +31,7 @@ const Signup = () => {
                 barStyle={"dark-content"}
                 backgroundColor={Colors.white} />
             <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ flexGrow: 1, }}>
-                <View style={{ marginHorizontal: 20, flex: 1 }}>
+                <View style={styles.innerContainer}>
                     <Image
                         source={Images.LogoBackground}
                         style={styles.logoImage}
@@ -51,9 +49,6 @@ const Signup = () => {
                         keyboardType={"default"}
                         returnKeyType={"next"}
                         mainCustomContianer={{ marginTop: 20 }}
-                        // onSubmitEditing={() => {
-                        //     passwordRef.current.focus();
-                        // }}
                         blurOnSubmit={false}
 
                     />
@@ -67,9 +62,6 @@ const Signup = () => {
                         keyboardType={"email-address"}
                         autoCapitalize="none"
                         returnKeyType={"next"}
-                        // onSubmitEditing={() => {
-                        //     passwordRef.current.focus();
-                        // }}
                         blurOnSubmit={false}
 
                     />
@@ -104,28 +96,28 @@ const Signup = () => {
                     <AppButton
                         btnTxt={"Sign Up"}
                         onPress={() => navigation.navigate("PhoneNumber")}
-                        leftButtonStyle={{ marginEnd: 0, }}
-                        customButtonStyle={{ marginTop: 30, width: "100%" }}
-                        txtStyle={{ color: "white", flex: 1, fontWeight: "bold", textAlign: "center" }}
+                        customButtonStyle={styles.btnCustomStyle}
                     />
 
-                    <View style={{ flexDirection: "row", justifyContent: "center", marginVertical: 25 }}>
+                    <View style={styles.socialContainer}>
                         <Image
                             source={Images.Facebook}
-                            style={[styles.facebookImage, { marginRight: 10 }]}
+                            style={[styles.facebookImage]}
                             resizeMode={"contain"} />
+                        <View style={styles.googleContainer}>
+                            <Image
+                                source={Images.Google}
+                                style={styles.googleImg}
+                                resizeMode={"cover"} />
+                        </View>
 
-                        <Image
-                            source={Images.Google}
-                            style={[styles.facebookImage, { marginLeft: 10 }]}
-                            resizeMode={"contain"} />
                     </View>
 
                     <View style={styles.signupContainer}>
                         <AppText>Already have an account?</AppText>
                         <TouchableOpacity onPress={() => navigation.navigate("Login")}>
                             <AppText txtStyle={{ color: Colors.red }}> Sign In</AppText>
-                       </TouchableOpacity>
+                        </TouchableOpacity>
                     </View>
 
                 </View>

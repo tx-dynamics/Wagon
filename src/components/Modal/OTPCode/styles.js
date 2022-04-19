@@ -5,8 +5,9 @@ const styles = StyleSheet.create({
     forgotPasswordTxt: {
         textAlign: "left",
         fontSize: 18,
-        fontWeight: "Bold",
-        color: Colors.red
+        fontWeight: "600",
+        color: Colors.red,
+        fontFamily:Fonts.SemiBold
     },
     forgotPasswordTxtDes:{
         textAlign:"left",
@@ -15,7 +16,7 @@ const styles = StyleSheet.create({
     },
     codeFieldRoot: {
         marginTop: 50,
-        marginHorizontal: 30
+        marginHorizontal: 10
     },
     cell: {
         width: 54,

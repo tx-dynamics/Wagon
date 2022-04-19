@@ -5,7 +5,7 @@ import {StyleSheet} from 'react-native'
 const styles = StyleSheet.create({
     container:{
         backgroundColor:Colors.lightgrey,
-        marginTop:8,
+        marginTop:3,
         borderRadius:10,
         height:53,
         justifyContent:"center",
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     },
     iconContainer:{padding:10},
     // eyeIcon:{height:14, width:14},
-    eyeOpenIcon:{height:25, width:25},
+    eyeOpenIcon:{height:20, width:20, marginRight:10},
 
     calendarIcon:{height:16, width:14},
     mainContianer:{marginTop:15}

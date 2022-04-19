@@ -73,11 +73,10 @@ const ResetPassword = ({ resetPasswordRef, codePasswordRef, forgotPasswordRef })
                     customContainer={{ backgroundColor: "rgba(174, 0, 1, 0.1)" }}
                     secureText />
                 <AppButton
-                    btnTxt={"Reset Password"}
+                    btnTxt={"Reset password"}
                     onPress={() => handleClose()}
                     leftButtonStyle={{ marginEnd: 0, }}
                     customButtonStyle={{ marginTop: 60, width: "100%" }}
-                    txtStyle={{ color: "white", flex: 1, fontWeight: "bold", textAlign: "center" }}
                 />
             </View>
 

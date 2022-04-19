@@ -7,7 +7,7 @@ import styles from './styles'
 const Header = (props) => {
     return (
         <View style={styles.headerContainer}>
-            <TouchableOpacity onPress={props.leftArrowIcon}>
+            <TouchableOpacity onPress={props.leftArrowIcon} style={styles.viewShow}>
                 <Image source={props.LeftImage} style={[styles.leftArrowIcon, props.customLeftImage]} />
             </TouchableOpacity>
             {props.headerNameShow ?

@@ -7,10 +7,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         borderRadius: 8,
         alignSelf: 'center',
-        height:48,
-        backgroundColor:Colors.red,
-        width:"80%",
-        flexDirection:"row",
+        height: 48,
+        backgroundColor: Colors.red,
+        width: "80%",
+        flexDirection: "row",
     },
     buttonTextWithImage: {
         fontSize: 14,
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
         color: Colors.white,
         fontFamily: Fonts.SemiBold,
         textAlign: "center",
-        marginStart:20
+        marginStart: 20
     },
     buttonText: {
         fontSize: 14,
@@ -27,14 +27,21 @@ const styles = StyleSheet.create({
         lineHeight: 21,
         color: Colors.white,
         fontFamily: Fonts.SemiBold,
-        textAlign:"center",
+        textAlign: "center",
     },
     leftArrowIcon: {
         width: 24,
         height: 24,
         resizeMode: "contain",
-        marginEnd: 20
+        marginEnd: 15
     },
+    txt: {
+        fontSize: 16,
+        fontWeight: "600",
+        fontFamily: Fonts.SemiBold,
+        flex:1,
+        color:Colors.white
+    }
 });
 
 export default styles

@@ -12,6 +12,8 @@ const images = {
     Google : require("src/assets/images/Google.png"),
     Facebook : require("src/assets/images/Facebook.png"),
     Checked : require("src/assets/images/Checked.png"),
+    DropDown : require("src/assets/images/DropDown.png"),
+    PickupLocation : require("src/assets/images/PickupLocation.png"),
     
 }
 
