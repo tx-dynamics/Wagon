@@ -18,6 +18,7 @@ const images = {
     Home : require("src/assets/images/Home.png"),
     ArrowRight : require("src/assets/images/ArrowRight.png"),
     Delete : require("src/assets/images/Delete.png"),
+    Menu : require("src/assets/images/Menu.png"),
     
 }
 

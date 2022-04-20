@@ -113,6 +113,8 @@ const Home = () => {
                 backgroundColor={"#0000"} />
 
 
+
+
             <MapView
                 provider={PROVIDER_GOOGLE}
                 style={styles.map}
@@ -126,6 +128,16 @@ const Home = () => {
                     longitudeDelta: 0.0421,
                 }}>
             </MapView>
+            <View style={{ position: "absolute", top: 0, justifyContent: "center" }}>
+                <Header
+                    LeftImage={Images.Menu}
+                    headerNameShow
+                    headerContainer={{ backgroundColor: "#0000" , marginTop:20}}
+                    leftArrowIcon={() => alert("Helo")} />
+
+
+            </View>
+
 
             <View style={styles.mapModalContainer}>
                 <TouchableOpacity onPress={() => setHomeModal(true)}
