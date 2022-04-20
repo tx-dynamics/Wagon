@@ -6,13 +6,13 @@ import styles from './styles'
 
 const Header = (props) => {
     return (
-        <View style={styles.headerContainer}>
+        <View style={[styles.headerContainer, props.headerContainer]}>
             <TouchableOpacity onPress={props.leftArrowIcon} style={styles.viewShow}>
                 <Image source={props.LeftImage} style={[styles.leftArrowIcon, props.customLeftImage]} />
             </TouchableOpacity>
             {props.headerNameShow ?
                 <View style={styles.headerTxtContainer}>
-                    <AppText style={styles.headerTxt}>{props.headerName}</AppText>
+                    <AppText txtStyle={[styles.headerTxt , props.headerCustomTxt]}>{props.headerName}</AppText>
                 </View>
                 : null
             }

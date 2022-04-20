@@ -14,12 +14,19 @@ const styles = StyleSheet.create({
         textAlign: "left",
         paddingStart: 25,
         fontFamily: Fonts.SemiBold,
-        fontWeight:"600"
+        fontWeight: "600"
+    },
+    fromTxt: {
+        fontSize: 16,
+        color: "rgba(0, 0, 0, 0.31)",
+        textAlign: "left",
+        fontWeight: "400",
+        paddingStart: 20
     },
     dropDownImg: {
         height: 21,
         width: 20,
-        marginRight: 20
+        marginRight:20,
     },
     mapModalContainer: {
         backgroundColor: Colors.white,
@@ -39,6 +46,39 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         flexDirection: "row",
         alignItems: "center"
+    },
+    modalInnerContainer: {
+        flex: 1,
+        justifyContent: "center",
+    },
+    modalHeadingContainer: {
+        flexDirection: "row",
+        marginHorizontal: 20,
+        alignItems:"center"
+    },
+    fromMainContainer: {
+        flexDirection: "row",
+        marginHorizontal: 29,
+        height: 60,
+        borderLeftColor: Colors.black,
+        borderLeftWidth: 1,
+        borderStyle: "dashed",
+        marginVertical: 10
+    },
+    fromContainer: {
+        height: 48,
+        backgroundColor: Colors.lightgrey,
+        borderRadius: 10,
+        width: "90%",
+        alignSelf: "center",
+        marginStart: 20,
+        justifyContent: "center"
+    },
+    toMainContainer: {
+        flexDirection: "row",
+        marginHorizontal: 29,
+        height: 60,
+        marginVertical: 10
     }
 })
 

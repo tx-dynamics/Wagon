@@ -14,6 +14,10 @@ const images = {
     Checked : require("src/assets/images/Checked.png"),
     DropDown : require("src/assets/images/DropDown.png"),
     PickupLocation : require("src/assets/images/PickupLocation.png"),
+    Location : require("src/assets/images/Location.png"),
+    Home : require("src/assets/images/Home.png"),
+    ArrowRight : require("src/assets/images/ArrowRight.png"),
+    Delete : require("src/assets/images/Delete.png"),
     
 }
 

@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
         alignItems: "center" 
     },
     headerTxt: {
-        fontSize: 16,
+        fontSize: 18,
         fontWeight: "500",
         lineHeight: 24,
         color: Colors.black,

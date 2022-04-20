@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import { StatusBar, PermissionsAndroid, View, Image, TouchableOpacity } from "react-native"
-import { useIsFocused, } from '@react-navigation/native'
+import { useIsFocused, useNavigation } from '@react-navigation/native'
 import styles from './styles'
-import {Images } from 'src/utils'
+import { Images, Colors } from 'src/utils'
 import AppText from 'src/components/AppText'
 import Geolocation from 'react-native-geolocation-service';
+import HomeModalView from 'src/components/Modal/HomeModal'
+import { useSelector } from 'react-redux'
+import Header from 'src/components/Header'
+
+
 import MapView, {
     Marker,
     PROVIDER_GOOGLE,
@@ -13,7 +18,13 @@ import MapView, {
 const Home = () => {
     let granted;
     let isFocused = useIsFocused()
-    
+    let navigation = useNavigation()
+
+
+    const homeModalRoute = useSelector((state) => state.app.homeModalRoute)
+
+
+    const [homeModal, setHomeModal] = useState(false)
     const [currentLongitude, setCurrentLongitude] = useState('');
     const [currentLatitude, setCurrentLatitude] = useState('');
     const [locationStatus, setLocationStatus] = useState('');
@@ -100,6 +111,8 @@ const Home = () => {
                 hidden={false}
                 barStyle={"dark-content"}
                 backgroundColor={"#0000"} />
+
+
             <MapView
                 provider={PROVIDER_GOOGLE}
                 style={styles.map}
@@ -113,26 +126,38 @@ const Home = () => {
                     longitudeDelta: 0.0421,
                 }}>
             </MapView>
+
             <View style={styles.mapModalContainer}>
-                <TouchableOpacity activeOpacity={0.8} style={styles.modalHeader}>
-                    <AppText txtStyle={styles.headingName}>Leaving Now</AppText>
+                <TouchableOpacity onPress={() => setHomeModal(true)}
+                    activeOpacity={0.8} style={styles.modalHeader}>
+                    <AppText txtStyle={styles.headingName}>{homeModalRoute ? "Leaving Now" : "Schedule"}</AppText>
                     <Image source={Images.DropDown} style={styles.dropDownImg} resizeMode={"contain"} />
                 </TouchableOpacity>
-                {/* <View style={{ flex: 1,}}>
-                    <View style={{ flexDirection: "row", marginHorizontal:20 }}>
+                <View style={styles.modalInnerContainer}>
+                    <View style={styles.modalHeadingContainer}>
                         <Image source={Images.PickupLocation} style={styles.dropDownImg} resizeMode={"contain"} />
-                        <AppText txtStyle={[styles.headingName, { color: Colors.black , paddingStart:0}]}>Pickup location</AppText>
+                        <AppText txtStyle={[styles.headingName, { color: Colors.black, paddingStart: 0 }]}>Pickup location</AppText>
                     </View>
-
-                </View> */}
+                    <View style={styles.fromMainContainer}>
+                        <TouchableOpacity onPress={() => homeModalRoute ? navigation.navigate("SearchYourTrip") : null}
+                            style={styles.fromContainer}>
+                            <AppText txtStyle={styles.fromTxt}>From</AppText>
+                        </TouchableOpacity>
+                    </View>
+                    <View style={styles.modalHeadingContainer}>
+                        <Image source={Images.Location} style={styles.dropDownImg} resizeMode={"contain"} />
+                        <AppText txtStyle={[styles.headingName, { color: Colors.black, paddingStart: 0 }]}>Drop location</AppText>
+                    </View>
+                    <View style={styles.toMainContainer}>
+                        <TouchableOpacity onPress={() => homeModalRoute ? navigation.navigate("SearchYourTrip") : null}
+                            style={styles.fromContainer}>
+                            <AppText txtStyle={styles.fromTxt}>To</AppText>
+                        </TouchableOpacity>
+                    </View>
+                </View>
             </View>
 
-
-
-
-
-
-
+            <HomeModalView setHomeModal={setHomeModal} homeModal={homeModal} />
         </View>
     )
 }
