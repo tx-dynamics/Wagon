@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     dropDownImg: {
         height: 21,
         width: 20,
-        marginRight:20,
+        marginRight:13,
     },
     mapModalContainer: {
         backgroundColor: Colors.white,
@@ -81,7 +81,8 @@ const styles = StyleSheet.create({
     },
     btnAdd: {
         position:"absolute",
-        bottom:10
+        bottom:10,
+        width:"90%"
     },
 })
 

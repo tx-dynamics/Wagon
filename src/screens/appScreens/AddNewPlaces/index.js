@@ -122,9 +122,9 @@ const AddNewPlaces = () => {
                 customLeftImage={{ tintColor: Colors.white }}
                 leftArrowIcon={() => navigation.goBack(null)} />
 
-            <View style={[styles.modalHeadingContainer, { marginTop: 25 }]}>
+            <View style={[styles.modalHeadingContainer, { marginTop: 13 }]}>
                 <Image source={Images.PickupLocation} style={styles.dropDownImg} resizeMode={"contain"} />
-                <AppText txtStyle={[styles.headingName, { color: Colors.black, paddingStart: 0 }]}>where to</AppText>
+                <AppText txtStyle={[styles.headingName, { color: Colors.black, paddingStart: 0 }]}>Where to?</AppText>
             </View>
             <ContactTextInput
                 multiline={false}
@@ -134,9 +134,10 @@ const AddNewPlaces = () => {
                 keyboardType={"default"}
                 autoCapitalize="none"
                 returnKeyType={"done"}
-                placeHolder= "where to?"
+                placeHolder= "Where to?"
                 placeholderTextColor={Colors.black}
-                mainCustomContianer={{ marginTop: -15, marginHorizontal: 20, marginBottom: 10 }}
+                customInputStyle={{paddingStart:10}}
+                mainCustomContianer={{ marginTop: -15, marginHorizontal: 20, marginBottom: 14, }}
 
             />
 

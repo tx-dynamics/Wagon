@@ -30,7 +30,7 @@ const ContactTextInput = (props) => {
                         maxLength={props.maxLength}
                         autoCapitalize={props.autoCapitalize}
                         returnKeyType={props.returnKeyType}
-                        // onSubmitEditing={props.onSubmitEditing}
+                        onSubmitEditing={props.onSubmitEditing}
                         blurOnSubmit={props.blurOnSubmit}
                         ref={props.ref}
                     />
@@ -38,6 +38,9 @@ const ContactTextInput = (props) => {
                         <TouchableOpacity onPress={props.onPress} style={styles.iconContainer}>
                             <Image source={props.eyeOpen ? Images.PasswordEye : Images.EyeOpen} style={styles.eyeOpenIcon} resizeMode={"cover"} />
                         </TouchableOpacity>
+                    )}
+                    {props.EditPic && (
+                            <Image source={Images.EditPencil} style={styles.editPencilIcon} resizeMode={"cover"} />
                     )}
                    
                 </View>

@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     },
     rightViewContainer: {
         width: "70%",
-        marginVertical: 20,
+        marginVertical: 10,
         borderLeftWidth: 1.5,
         borderStyle: "dashed",
         paddingStart: 20,
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
     },
     flatListContainer: {
         paddingBottom: 10,
-        marginTop: 0,
+        marginTop: 14,
     },
     listContiner: {
         paddingRight: 0,

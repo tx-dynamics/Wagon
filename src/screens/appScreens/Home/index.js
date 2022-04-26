@@ -119,6 +119,7 @@ const Home = () => {
                 provider={PROVIDER_GOOGLE}
                 style={styles.map}
                 showsUserLocation
+                showsMyLocationButton={false} 
                 region={region}
                 maxZoomLevel={24}
                 initialRegion={{
@@ -133,7 +134,7 @@ const Home = () => {
                     LeftImage={Images.Menu}
                     headerNameShow
                     headerContainer={{ backgroundColor: "#0000" , marginTop:20}}
-                    leftArrowIcon={() => alert("Helo")} />
+                    leftArrowIcon={() => navigation.openDrawer()} />
 
 
             </View>

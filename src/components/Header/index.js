@@ -12,11 +12,17 @@ const Header = (props) => {
             </TouchableOpacity>
             {props.headerNameShow ?
                 <View style={styles.headerTxtContainer}>
-                    <AppText txtStyle={[styles.headerTxt , props.headerCustomTxt]}>{props.headerName}</AppText>
+                    <AppText txtStyle={[styles.headerTxt, props.headerCustomTxt]}>{props.headerName}</AppText>
                 </View>
                 : null
             }
-            <View style={styles.viewShow}></View>
+            {props.thirdIcon ?
+                <TouchableOpacity onPress={props.rightArrowIcon} style={styles.viewShow}>
+                    <Image source={props.RightImage} style={[styles.leftArrowIcon, props.customRightImage]} />
+                </TouchableOpacity>
+                :
+                <View style={styles.viewShow}></View>
+            }
         </View>
     )
 }

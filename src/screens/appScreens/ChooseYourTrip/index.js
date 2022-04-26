@@ -54,13 +54,12 @@ const SearchYourTrip = () => {
                 headerContainer={{ backgroundColor: Colors.red }}
                 customLeftImage={{ tintColor: Colors.white }}
                 leftArrowIcon={() => navigation.goBack(null)} />
-            
+
             <TouchableOpacity onPress={() => setOpenDayModal(!openDayModal)}
-                style={{ borderRadius: 10, borderColor: Colors.black, borderWidth: 1, height: 51, width: "90%", alignSelf: "center", marginVertical: 20, flexDirection: "row", justifyContent: "center", alignItems: "center" }}>
+                style={{ borderRadius: 10, borderColor: Colors.black, borderWidth: 1, height: 51, width: "90%", alignSelf: "center", marginTop: 20, flexDirection: "row", justifyContent: "center", alignItems: "center" }}>
                 <AppText txtStyle={styles.weekDayTxt}>Tuesday</AppText>
                 <Image source={Images.DropDown} style={styles.dropDownIcon} resizeMode={"contain"} />
             </TouchableOpacity>
-
             <FlatList
                 data={searchTripList}
                 contentContainerStyle={styles.flatListContainer}
@@ -98,7 +97,9 @@ const SearchYourTrip = () => {
                     </View>
                 )}
             />
-             <DayViewModalView
+
+
+            <DayViewModalView
                 setOpenDayModal={setOpenDayModal}
                 openDayModal={openDayModal}
             />

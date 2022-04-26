@@ -54,7 +54,7 @@ const SavedPlaced = () => {
                 backgroundColor={Colors.red} />
             <Header
                 LeftImage={Images.LeftArrow}
-                headerName={"Saved Placed"}
+                headerName={"Saved Places"}
                 headerNameShow
                 headerCustomTxt={{ color: Colors.white }}
                 headerContainer={{ backgroundColor: Colors.red }}
@@ -83,7 +83,7 @@ const SavedPlaced = () => {
             </View>
             <TouchableOpacity onPress={() => navigation.navigate("AddNewPlaces")}
             activeOpacity={0.8} style={styles.savedPlaceContainer}>
-                <Image source={Images.Location} style={[styles.listIcon, {marginRight:10}]} resizeMode={"contain"} />
+                <Image source={Images.Location} style={[styles.locationIcon]} resizeMode={"contain"} />
                 <AppText txtStyle={[styles.headingName, { color: Colors.black, paddingStart: 0,  }]}>Add new places</AppText>
 
 

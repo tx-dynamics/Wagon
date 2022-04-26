@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     leftArrowIcon: {
         width: 24,
         height: 24,
-        resizeMode: "contain",
+        resizeMode: "cover",
         marginStart: 20
     },
     headerTxtContainer:{ 

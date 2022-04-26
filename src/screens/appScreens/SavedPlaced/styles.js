@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     },
     listContiner: {
         paddingRight: 0,
-        marginVertical: 10,
+        marginVertical: 7,
         paddingVertical: 5,
         backgroundColor:Colors.lightgrey,
         borderRadius:10,
@@ -84,13 +84,18 @@ const styles = StyleSheet.create({
         marginRight: 20,
         tintColor: Colors.red
     },
+    locationIcon: {
+        height: 21,
+        width: 17,
+        marginRight: 5,
+        tintColor: Colors.red
+    },
     savedPlaceContainer: {
         marginHorizontal: 20,
         borderRadius: 10,
         flexDirection: "row",
         alignItems: "center",
-        paddingStart: 15,
-        alignSelf:"center"
+        alignSelf:"center",
     }
 
 })

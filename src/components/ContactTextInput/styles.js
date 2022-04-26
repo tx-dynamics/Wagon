@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     iconContainer:{padding:10},
     // eyeIcon:{height:14, width:14},
     eyeOpenIcon:{height:20, width:20, marginRight:10},
+    editPencilIcon:{height:16, width:16, marginRight:20},
 
     calendarIcon:{height:16, width:14},
     mainContianer:{marginTop:15}
