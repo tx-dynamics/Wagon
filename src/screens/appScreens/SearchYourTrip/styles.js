@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     fromMainContainer: {
         flexDirection: "row",
         marginHorizontal: 29,
-        height: 50,
+        height: 40,
         borderLeftColor: Colors.black,
         borderLeftWidth: 1,
         borderStyle: "dashed",
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
         height: 48,
         backgroundColor: Colors.lightgrey,
         borderRadius: 10,
-        width: "90%",
+        width: "95%",
         alignSelf: "center",
         marginStart: 20,
         justifyContent: "center"
@@ -32,13 +32,13 @@ const styles = StyleSheet.create({
     toMainContainer: {
         flexDirection: "row",
         marginHorizontal: 29,
-        height: 60,
+        height: 50,
         marginVertical: 0
     },
     dropDownImg: {
         height: 21,
         width: 20,
-        marginRight: 20,
+        marginRight: 15,
     },
     headingName: {
         fontSize: 13,
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
         color: Colors.black,
         textAlign: "left",
         fontWeight: "400",
-        paddingStart: 20
+        paddingStart: 15
     },
     flatListContainer: {
         paddingBottom: 20,
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     },
     listContiner: {
         paddingRight: 0,
-        marginVertical: 6,
+        marginVertical: 3,
         paddingVertical: 5,
 
     },
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         flexDirection: "row",
         alignItems: "center",
-        paddingStart: 15
+        paddingStart: 10
     }
 
 })

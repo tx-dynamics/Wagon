@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 20,
         justifyContent: 'center',
         borderRadius: 5,
-        marginVertical: 10
+        marginVertical:5
     },
     visibleContainer:{
         flexDirection: 'row',
@@ -43,11 +43,11 @@ const styles = StyleSheet.create({
         color: Colors.red,
         fontFamily: Fonts.Regular,
         fontWeight: "400",
-        flex:1,
         textAlign:"left",
         marginHorizontal:20,
         paddingTop:10,
-        paddingBottom:20
+        paddingBottom:20,
+        lineHeight:18
     },
     listHeadingTxt: {
         fontSize: 12,

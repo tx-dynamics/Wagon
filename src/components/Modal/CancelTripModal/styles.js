@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
 
     },
     listContiner: {
-        marginVertical: 8,
+        marginVertical: 6,
         paddingVertical: 10,
         backgroundColor: Colors.lightgrey,
         borderRadius: 10,

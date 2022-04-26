@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     },
     btnLogin: {
         marginTop: 30,
-        width:95
+        width:115
     },
     headingTxt: {
         fontSize: 20,

@@ -53,7 +53,7 @@ const SearchYourTrip = () => {
                 backgroundColor={Colors.red} />
             <Header
                 LeftImage={Images.LeftArrow}
-                headerName={"Faqs"}
+                headerName={"FAQS"}
                 headerNameShow
                 headerCustomTxt={{ color: Colors.white }}
                 headerContainer={{ backgroundColor: Colors.red }}
@@ -61,10 +61,10 @@ const SearchYourTrip = () => {
                 leftArrowIcon={() => navigation.goBack(null)} />
 
             <View style={{ flex: 1 }}>
-                <Image source={Images.WagonLogo} style={{ height: 158, width: "90%", marginVertical: 20, alignSelf: "center", borderRadius: 20 }} />
+                <Image source={Images.WagonLogo} style={{ height: 158, width: "90%", marginTop: 20, alignSelf: "center", borderRadius: 10 }} />
 
                 <FlatList
-                    style={{ marginTop: 0 }}
+                    style={{ marginTop: 20 }}
                     data={data}
                     keyExtractor={it => it.id.toString()}
                     renderItem={({ item, index }) => (

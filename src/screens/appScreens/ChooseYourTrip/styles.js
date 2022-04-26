@@ -14,14 +14,13 @@ const styles = StyleSheet.create({
     leftViewContainer: {
         width: "30%",
         marginVertical: 20,
-        alignItems: "center",
+        // alignItems: "center",
         flexDirection: "row",
     },
     leftWhiteView: {
         height: 34,
         width: 34,
         backgroundColor: "white",
-        alignSelf: "center",
         borderRadius: 17,
         right: 15
     },
@@ -102,6 +101,7 @@ const styles = StyleSheet.create({
         textAlign: "left",
         fontFamily: Fonts.Medium,
         fontWeight: "500",
+        marginTop:-4
     },
 
     weekDayTxt: {

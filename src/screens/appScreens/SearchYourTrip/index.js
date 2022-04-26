@@ -13,28 +13,23 @@ const SearchYourTrip = () => {
         {
             id: 1,
             name: "Add Home",
-            image: Images.MyBooking,
+            image: Images.Home,
 
         },
         {
             id: 2,
-            image: Images.PaymentMethod,
+            image: Images.AddWork,
             name: "Add work",
 
 
         },
         {
             id: 3,
-            image: Images.HelpCenter,
+            image: Images.AddSchool,
             name: "Add School",
 
         },
-        {
-            id: 3,
-            image: Images.HelpCenter,
-            name: "Add School",
-
-        },
+   
 
 
     ]
@@ -68,7 +63,7 @@ const SearchYourTrip = () => {
                 </View>
                 <View style={styles.modalHeadingContainer}>
                     <Image source={Images.Location} style={styles.dropDownImg} resizeMode={"contain"} />
-                    <AppText txtStyle={[styles.headingName, { color: Colors.black, paddingStart: 0 }]}>where to?</AppText>
+                    <AppText txtStyle={[styles.headingName, { color: Colors.black, paddingStart: 0 }]}>Where to?</AppText>
                 </View>
                 <View style={styles.toMainContainer}>
                     <TouchableOpacity onPress={() => navigation.navigate("ChooseYourTrip")}
@@ -83,7 +78,7 @@ const SearchYourTrip = () => {
                     renderItem={({ item, }) => (
                         <View style={styles.listContiner}>
                             <View style={styles.innerContainer}>
-                                <Image source={Images.Home} style={styles.listIcon} resizeMode={"contain"} />
+                                <Image source={item.image} style={styles.listIcon} resizeMode={"contain"} />
                                 <AppText txtStyle={[styles.headingName, { color: Colors.black, paddingStart: 0 }]}>{item?.name}</AppText>
 
 
@@ -96,7 +91,7 @@ const SearchYourTrip = () => {
             activeOpacity={0.8} style={styles.savedPlaceContainer}>
                 <Image source={Images.Location} style={styles.listIcon} resizeMode={"contain"} />
                 <AppText txtStyle={[styles.headingName, { color: Colors.black, paddingStart: 0 , flex:1}]}>Saved Places</AppText>
-                <Image source={Images.ArrowRight} style={[styles.listIcon , {tintColor:Colors.black}]} resizeMode={"contain"} />
+                <Image source={Images.ArrowRight} style={[styles.listIcon , {tintColor:Colors.black, marginRight:10}]} resizeMode={"contain"} />
 
 
             </TouchableOpacity>

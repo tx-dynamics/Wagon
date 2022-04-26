@@ -9,9 +9,9 @@ const styles = StyleSheet.create({
   },
   homeModalCard: {
     backgroundColor: Colors.white,
-    borderTopLeftRadius: 16,
-    borderTopRightRadius: 16,
-    paddingVertical: 10,
+    borderTopLeftRadius: 8,
+    borderTopRightRadius: 8,
+    paddingVertical: 18,
     paddingHorizontal: 20,
     paddingBottom: 25,
     

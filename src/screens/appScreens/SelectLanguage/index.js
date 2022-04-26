@@ -38,7 +38,7 @@ const SearchYourTrip = () => {
                 leftArrowIcon={() => navigation.goBack(null)} />
 
             <View style={{ flex: 1 }}>
-                <View style={{ flexDirection: "row", justifyContent: "space-evenly", marginVertical: 20, }}>
+                <View style={{ flexDirection: "row", justifyContent: "space-evenly", marginVertical: 20,marginHorizontal:20 }}>
                     <TouchableOpacity onPress={() => handleTripEvent()}
                         style={[styles.btnContainer, { backgroundColor: tripStatusCheck ? Colors.red : Colors.lightgrey }]}>
                         <AppText txtStyle={[styles.headingTxt, { color: tripStatusCheck ? Colors.white : Colors.black }]}>English</AppText>

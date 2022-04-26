@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 20,
         justifyContent: 'center',
         borderRadius: 5,
-        marginVertical: 10
+        marginVertical:6
     },
     settingIcons: {
         width: 24,

@@ -68,14 +68,14 @@ const SearchYourTrip = () => {
                     <View style={styles.listContiner}>
                         <View style={styles.innerContainer}>
                             <View style={styles.leftViewContainer}>
-                                <View>
+                                <View style={{alignSelf:"center"}}>
                                     <View style={styles.leftWhiteView}></View>
                                 </View>
                                 <View>
-                                    <AppText txtStyle={[styles.listHeadingTxt]}>Tue</AppText>
-                                    <AppText txtStyle={[styles.listDesTxt, { color: Colors.black, }]}>07:03 Am</AppText>
+                                        <AppText txtStyle={[styles.listHeadingTxt,{marginTop:10}]}>Tue</AppText>
+                                        <AppText txtStyle={[styles.listDesTxt, { color: Colors.black,}]}>07:03 Am</AppText>
 
-                                    <AppText txtStyle={[styles.listHeadingTxt, { marginTop: 15 }]}>Arrive</AppText>
+                                    <AppText txtStyle={[styles.listHeadingTxt, { marginTop: 40 }]}>Arrive</AppText>
                                     <AppText txtStyle={[styles.listDesTxt]}>07:03 Am</AppText>
                                 </View>
                             </View>

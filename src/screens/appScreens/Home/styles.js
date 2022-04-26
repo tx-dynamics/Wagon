@@ -21,16 +21,16 @@ const styles = StyleSheet.create({
         color: "rgba(0, 0, 0, 0.31)",
         textAlign: "left",
         fontWeight: "400",
-        paddingStart: 20
+        paddingStart: 15
     },
     dropDownImg: {
         height: 21,
         width: 20,
-        marginRight:20,
+        marginRight:15,
     },
     mapModalContainer: {
         backgroundColor: Colors.white,
-        height: 310,
+        height: 280,
         borderTopEndRadius: 20,
         borderTopStartRadius: 20,
         position: "absolute",
@@ -54,12 +54,13 @@ const styles = StyleSheet.create({
     modalHeadingContainer: {
         flexDirection: "row",
         marginHorizontal: 20,
-        alignItems:"center"
+        alignItems:"center",
+
     },
     fromMainContainer: {
         flexDirection: "row",
         marginHorizontal: 29,
-        height: 60,
+        height: 50,
         borderLeftColor: Colors.black,
         borderLeftWidth: 1,
         borderStyle: "dashed",
@@ -69,7 +70,7 @@ const styles = StyleSheet.create({
         height: 48,
         backgroundColor: Colors.lightgrey,
         borderRadius: 10,
-        width: "90%",
+        width: "95%",
         alignSelf: "center",
         marginStart: 20,
         justifyContent: "center"
@@ -77,7 +78,7 @@ const styles = StyleSheet.create({
     toMainContainer: {
         flexDirection: "row",
         marginHorizontal: 29,
-        height: 60,
+        height: 50,
         marginVertical: 10
     }
 })

@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
         fontWeight: "500",
         color: "rgba(0, 0, 0, 0.28)",
         textAlign: "left",
-        marginTop: 0
+        marginTop: -6
 
     },
     dateTxt: {
@@ -60,7 +60,8 @@ const styles = StyleSheet.create({
         fontWeight: "600",
         color: Colors.black,
         textAlign: "left",
-        marginVertical: 10
+        marginVertical: 10,
+        paddingStart:5
     },
     priceTxt: {
         fontFamily: Fonts.SemiBold,
@@ -68,6 +69,7 @@ const styles = StyleSheet.create({
         fontWeight: "600",
         color: Colors.black,
         textAlign: "left",
+        paddingStart:5
     },
     cancelTxt: {
         fontFamily: Fonts.Medium,

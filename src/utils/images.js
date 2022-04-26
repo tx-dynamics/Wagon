@@ -37,6 +37,10 @@ const images = {
     Aboutus : require("src/assets/images/Aboutus.png"),
     EditPencil : require("src/assets/images/EditPencil.png"),
     Camera : require("src/assets/images/Camera.png"),
+    UpChevBlack : require("src/assets/images/UpChevBlack.png"),
+    AddSchool : require("src/assets/images/AddSchool.png"),
+    AddWork : require("src/assets/images/AddWork.png"),
+    RightIcon : require("src/assets/images/RightIcon.png"),
     
 }
 
