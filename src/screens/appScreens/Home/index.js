@@ -11,6 +11,7 @@ import { useSelector } from 'react-redux'
 import Header from 'src/components/Header'
 
 
+
 import MapView, {
     Marker,
     PROVIDER_GOOGLE,
@@ -27,6 +28,9 @@ const Home = () => {
 
     const [homeModal, setHomeModal] = useState(false)
     const [scheduleModal, setScheduleModal] = useState(false)
+    const [date, setDate] = useState('');
+
+
     const [currentLongitude, setCurrentLongitude] = useState('');
     const [currentLatitude, setCurrentLatitude] = useState('');
     const [locationStatus, setLocationStatus] = useState('');
@@ -104,7 +108,7 @@ const Home = () => {
             },
         );
     };
-
+   
     return (
         <View
             style={styles.container}>
@@ -131,7 +135,7 @@ const Home = () => {
                     longitudeDelta: 0.0421,
                 }}>
             </MapView>
-            <View style={{ position: "absolute", top: 0, justifyContent: "center",  }}>
+            <View style={{ position: "absolute", top: 0, justifyContent: "center", }}>
                 <Header
                     LeftImage={Images.Menu}
                     headerNameShow
@@ -140,9 +144,9 @@ const Home = () => {
 
 
             </View>
-           
 
-        {/*  <View style={{height:330,backgroundColor: "#0000", position:"absolute", top:310, right:-30}}>
+
+            {/*  <View style={{height:330,backgroundColor: "#0000", position:"absolute", top:310, right:-30}}>
                 <TouchableOpacity style={{backgroundColor:"rgba(174, 0, 1, 0.44)", height:69 , width:50, borderRadius:21,justifyContent:"center"}}>
                     <Image source={Images.RightIcon} style={{height:32, width:21, tintColor:Colors.white, }}/>
                 </TouchableOpacity>
@@ -156,6 +160,7 @@ const Home = () => {
 
 
             <View style={styles.mapModalContainer}>
+              
                 <TouchableOpacity onPress={() => setHomeModal(true)}
                     activeOpacity={0.8} style={styles.modalHeader}>
                     <AppText txtStyle={styles.headingName}>{homeModalRoute ? "Leaving now" : "Schedule"}</AppText>
@@ -186,7 +191,8 @@ const Home = () => {
             </View>
 
             <HomeModalView setHomeModal={setHomeModal} homeModal={homeModal} />
-            <ScheduleModalView setScheduleModal={setScheduleModal} scheduleModal={scheduleModal} />
+            <ScheduleModalView setScheduleModal={setScheduleModal}
+                scheduleModal={scheduleModal} />
         </View>
     )
 }

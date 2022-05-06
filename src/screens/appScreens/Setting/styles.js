@@ -24,7 +24,6 @@ const styles = StyleSheet.create({
     settingIcons: {
         width: 24,
         height: 24,
-        tintColor: Colors.red,
         marginHorizontal: 10
     },
    
