@@ -4,9 +4,12 @@ import { useNavigation } from '@react-navigation/native'
 import { Images, Colors } from 'src/utils'
 import styles from './styles'
 import AppText from 'src/components/AppText'
+import { useSelector } from 'react-redux'
 
 const Upcoming = () => {
     let navigation = useNavigation()
+    const switchApp = useSelector((state) => state.auth.switchApp)
+
     const searchTripList = [
         {
             id: 1,
@@ -40,7 +43,7 @@ const Upcoming = () => {
                 showsVerticalScrollIndicator={false}
                 keyExtractor={(item) => item.id.toString()}
                 renderItem={({ item, }) => (
-                    <TouchableOpacity activeOpacity={0.8} onPress={() => navigation.navigate("TripDetails")}
+                    <TouchableOpacity activeOpacity={0.8} onPress={() => navigation.navigate(switchApp ? "DriverTripDetials" :"TripDetails")}
                     style={styles.listContiner}>
                         <AppText numberOfLines={1} txtStyle={[styles.listHeadingTxt, { marginTop: 5 }]}>24 Jan   09:35</AppText>
                         <View style={{ flexDirection: "row",  marginTop:-8,}}>

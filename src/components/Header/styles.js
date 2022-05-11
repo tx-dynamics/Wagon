@@ -12,14 +12,31 @@ const styles = StyleSheet.create({
         width: 24,
         height: 24,
         resizeMode: "cover",
-        marginStart: 20
+        marginStart: 20,
+    },
+    leftUserImage: {
+        width: 29,
+        height: 29,
+        marginRight: 10,
+        marginLeft:-10
     },
     headerTxtContainer:{ 
         flex: 1, 
         alignItems: "center" 
     },
+    headerTxtLeftContainer:{ 
+        // flex: 1, 
+        // alignItems: "center" 
+    },
     headerTxt: {
         fontSize: 18,
+        fontWeight: "500",
+        lineHeight: 24,
+        color: Colors.black,
+        fontFamily: Fonts.Medium
+    },
+    thirdTxt: {
+        fontSize: 14,
         fontWeight: "500",
         lineHeight: 24,
         color: Colors.black,

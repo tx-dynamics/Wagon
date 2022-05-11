@@ -5,9 +5,24 @@ import { Colors, Images } from 'src/utils'
 import styles from './styles'
 import AppText from 'src/components/AppText'
 import AppButton from 'src/components/AppButton'
+import { useDispatch } from "react-redux"
+import { setSwitchApp } from 'src/redux/actions/authActions'
+
+
 
 const SelectParentorDrive = () => {
     let navigation = useNavigation()
+    let dispatch = useDispatch()
+
+
+    const handleDaily = () => {
+        navigation.navigate("OnBoarding")
+        dispatch(setSwitchApp(false))
+    }
+    const handleDriver = () => {
+        navigation.navigate("OnBoarding")
+        dispatch(setSwitchApp(true))
+    }
     
     return (
         <SafeAreaView
@@ -33,7 +48,7 @@ const SelectParentorDrive = () => {
                 <AppText txtStyle={styles.continueTxt}>Continue as</AppText>
                 <AppButton
                     btnTxt={"Wagon Daily"}
-                    onPress={() => navigation.navigate("OnBoarding")}
+                    onPress={() => handleDaily()}
                     ImageBack={Images.RightChev}
                     customButtonStyle={styles.btnStyle}
                     buttonTextWithImage={{color:"white"}}
@@ -41,8 +56,8 @@ const SelectParentorDrive = () => {
                     txtStyle={styles.btnTxt}
                 />
                 <AppButton
-                    btnTxt={"Wagon Business"}
-                    onPress={() => alert("Comming Soon")}
+                    btnTxt={"Wagon Driver"}
+                    onPress={() => handleDriver()}
                     customButtonStyle={styles.btnStyle}
                     buttonTextWithImage={{textAlign :"center"}}
                     txtStyle={styles.btnTxt}
@@ -50,7 +65,7 @@ const SelectParentorDrive = () => {
                     rightImage
                     />
             </View>
-        </SafeAreaView>
+        </SafeAreaView> 
     )
 }
 

@@ -7,11 +7,12 @@ import Header from 'src/components/Header'
 import AppText from 'src/components/AppText'
 import UpcomingTrip from './UpcomingTrip'
 import PastTrip from './PastTrip'
+import { useSelector } from 'react-redux'
 
 const SearchYourTrip = () => {
     let navigation = useNavigation()
-
     const [tripStatusCheck, setTripStatusCheck] = useState(true)
+    const switchApp = useSelector((state) => state.auth.switchApp)
 
     const handleTripEvent = () => {
         setTripStatusCheck(!tripStatusCheck)
@@ -36,7 +37,7 @@ const SearchYourTrip = () => {
                 leftArrowIcon={() => navigation.goBack(null)}
                 thirdIcon
                 RightImage={Images.Plus}
-                rightArrowIcon={() => navigation.navigate("SearchYourTrip")} />
+                rightArrowIcon={() => switchApp ? null : navigation.navigate("SearchYourTrip")} />
 
             <View style={{ flex: 1 ,marginHorizontal:20}}>
                 <View style={{ flexDirection: "row", justifyContent: 'space-between', marginVertical: 15}}>

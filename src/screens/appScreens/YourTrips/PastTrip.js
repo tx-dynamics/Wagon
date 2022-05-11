@@ -3,10 +3,13 @@ import { Image, View, FlatList, } from "react-native"
 import { useNavigation } from '@react-navigation/native'
 import { Images, Colors } from 'src/utils'
 import styles from './styles'
+import { useSelector } from 'react-redux'
 import AppText from 'src/components/AppText'
 
 const Upcoming = () => {
     let navigation = useNavigation()
+    const switchApp = useSelector((state) => state.auth.switchApp)
+
     const searchTripList = [
         {
             id: 1,

@@ -24,12 +24,14 @@ const styles = StyleSheet.create({
         backgroundColor: Colors.lightgrey,
         padding: 20,
         marginHorizontal: 20,
-        borderRadius: 20
+        borderRadius: 10
     },
     privacyInnerContainer: {
         backgroundColor: Colors.white,
         padding: 20,
-        borderRadius: 20
+        borderRadius: 10,
+        marginTop:0,
+        marginHorizontal:-6
     },
     btnContainer: {
         marginVertical: 40,

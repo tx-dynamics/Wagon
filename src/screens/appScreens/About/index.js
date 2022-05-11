@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { StatusBar, Image, View, TouchableOpacity, FlatList, Text } from "react-native"
+import { StatusBar, Image, View, TouchableOpacity, FlatList, Text, ScrollView } from "react-native"
 import { useNavigation } from '@react-navigation/native'
 import { Images, Colors } from 'src/utils'
 import styles from './styles'
@@ -42,7 +42,7 @@ const About = () => {
                 customLeftImage={{ tintColor: Colors.white }}
                 leftArrowIcon={() => navigation.goBack(null)} />
 
-            <View style={styles.aboutContainer}>
+            <ScrollView style={styles.aboutContainer}>
 
                 <AppText txtStyle={styles.aboutDesTxt}>
                     Lorem ipsum dolor sit amet, consectetur a adipiscing elitempor, convallis interduction id et, sed ut egestas. Aliquam volutpat leo, sodales proin sapien turpis id ac dictumst. Aenean tortor nulla viverra elit iaculis in. A, et metus ac, fermentum netus dolor. Orcien semper dui amet lacus, facilisi us sit enimd a. Gravida eu semper purus ornare. Diamu ornare amet tincidunt. Auctor lorem quisan habitasse cursus. Viverra ac eu dui, est pick condimentum mauris ornare.{'\n'}
@@ -52,7 +52,7 @@ const About = () => {
 
 
 
-            </View>
+            </ScrollView>
 
         </View>
 

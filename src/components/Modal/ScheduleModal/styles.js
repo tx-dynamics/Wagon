@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     },
     btnTxt: {
         color: Colors.black,
-        marginStart: 10,
+        marginStart: 20,
         fontSize: 14,
         fontWeight: "400",
         textAlign: "left",
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
         marginTop: 21
     },
     btnContainer:{
-        paddingVertical:40
+        paddingVertical:25
     }
 
 });

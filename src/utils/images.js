@@ -41,6 +41,8 @@ const images = {
     AddSchool : require("src/assets/images/AddSchool.png"),
     AddWork : require("src/assets/images/AddWork.png"),
     RightIcon : require("src/assets/images/RightIcon.png"),
+    DriverImage : require("src/assets/images/DriverImage.png"),
+    ConfirmBooked : require("src/assets/images/ConfirmBooked.png"),
     
 }
 

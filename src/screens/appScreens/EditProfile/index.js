@@ -8,6 +8,7 @@ import Header from 'src/components/Header'
 
 import ContactTextInput from 'src/components/ContactTextInput'
 import AppButton from 'src/components/AppButton'
+import { useSelector } from 'react-redux'
 
 const EditProfile = () => {
     let navigation = useNavigation()
@@ -22,6 +23,8 @@ const EditProfile = () => {
     const nameRef = useRef(null)
     const phoneRef = useRef(null)
     const languageRef = useRef(null)
+    const switchApp = useSelector((state) => state.auth.switchApp)
+
 
     return (
         <SafeAreaView
@@ -60,7 +63,7 @@ const EditProfile = () => {
                         mainCustomContianer={{ marginTop: 20 }}
                         blurOnSubmit={false}
                         EditPic
-                        customInputStyle={{ paddingStart: 15 }}
+                        customInputStyle={{ paddingStart: 10 }}
 
 
                     />
@@ -77,7 +80,7 @@ const EditProfile = () => {
                         returnKeyType={"next"}
                         blurOnSubmit={false}
                         EditPic
-                        customInputStyle={{ paddingStart: 15 }}
+                        customInputStyle={{ paddingStart: 10}}
 
 
 
@@ -95,16 +98,37 @@ const EditProfile = () => {
                         returnKeyType={"next"}
                         blurOnSubmit={false}
                         EditPic
-                        customInputStyle={{ paddingStart: 15 }}
+                        customInputStyle={{ paddingStart: 10 }}
 
 
                     />
+                    {switchApp ? 
+                      <ContactTextInput
+                      ref={emailRef}
+                      headerName={"City"}
+                      headerNameShow
+                      multiline={false}
+                      // value={email}
+                      value={"Newport"}
+                      onChangeText={(txt) => setEmail(txt)}
+                      keyboardType={"email-address"}
+                      autoCapitalize="none"
+                      returnKeyType={"next"}
+                      blurOnSubmit={false}
+                      EditPic
+                      customInputStyle={{ paddingStart: 10 }}
+
+
+                  />
+                  :null
+                    }
+                    
 
                     <ContactTextInput
                         ref={languageRef}
                         headerName={"Language"}
                         headerNameShow
-                        customInputStyle={{ paddingStart: 15 }}
+                        customInputStyle={{ paddingStart: 10 }}
 
                         // value={cPassword}
                         value={"English (united kingdom)"}

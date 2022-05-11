@@ -65,15 +65,15 @@ const SearchYourTrip = () => {
                 contentContainerStyle={styles.flatListContainer}
                 keyExtractor={(item) => item.id.toString()}
                 renderItem={({ item, }) => (
-                    <View style={styles.listContiner}>
+                    <TouchableOpacity onPress={() => navigation.navigate("ChooseTripDetails")} style={styles.listContiner}>
                         <View style={styles.innerContainer}>
                             <View style={styles.leftViewContainer}>
-                                <View style={{alignSelf:"center"}}>
+                                <View style={{ alignSelf: "center" }}>
                                     <View style={styles.leftWhiteView}></View>
                                 </View>
                                 <View>
-                                        <AppText txtStyle={[styles.listHeadingTxt,{marginTop:10}]}>Tue</AppText>
-                                        <AppText txtStyle={[styles.listDesTxt, { color: Colors.black,}]}>07:03 Am</AppText>
+                                    <AppText txtStyle={[styles.listHeadingTxt, { marginTop: 10 }]}>Tue</AppText>
+                                    <AppText txtStyle={[styles.listDesTxt, { color: Colors.black, }]}>07:03 Am</AppText>
 
                                     <AppText txtStyle={[styles.listHeadingTxt, { marginTop: 40 }]}>Arrive</AppText>
                                     <AppText txtStyle={[styles.listDesTxt]}>07:03 Am</AppText>
@@ -94,7 +94,7 @@ const SearchYourTrip = () => {
                         <View style={styles.priceContainer}>
                             <AppText txtStyle={[styles.listDesTxt, { color: Colors.white, }]}>$20 </AppText>
                         </View>
-                    </View>
+                    </TouchableOpacity>
                 )}
             />
 
